@@ -1,19 +1,5 @@
 # hello-mkh
 
-## Project setup
-```
-npm install
-```
+## instructions
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+这是一个解决大型项目中，vuex数据臃肿庞大导致的性能问题。对vuex进行模块化并执行懒加载模式
