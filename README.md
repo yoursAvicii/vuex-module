@@ -1,11 +1,10 @@
-# hello-mkh
-
-##说明
+## 说明
 
 这是一个解决大型项目中，vuex数据臃肿庞大导致的性能问题。对vuex进行模块化并执行懒加载模式
 
-##directory
+## 文件目录说明
 
+```
 |--src
 |--|--assets            样式文件
 |--|--components        组件目录
@@ -15,10 +14,13 @@
 |--|--vuexmodulespl     怎么实现vuex懒加载的js(重要)
 |--|--App.vue           
 |--|--main.js 
+```
 
-##vuexmodulespl
 
 
+## vuexmodulespl目录中的js说明
+
+```javascript
 var myvuex = {
 //install一个方法，使其在vue中注册使用
   install: function(vue) {
@@ -50,9 +52,13 @@ var myvuex = {
   },
 };
 module.exports = myvuex;
+```
 
-##mian.js
 
+
+## mian.js中去引入
+
+```javascript
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
@@ -69,10 +75,11 @@ new Vue({
   store,
   render: function (h) { return h(App) }
 }).$mount('#app')
+```
 
+## module.vue视图中的定义
 
-##module.vue
-
+```vue
 <template>
     <div>   
         模块一{{myname}}
@@ -80,9 +87,7 @@ new Vue({
 </template>
 <script>
 export default {
-  //定义模块名称!!非常重要!!
     name:"module1",
-  //定义是否需要加载vuex!!!
     isVuex:true,
     data(){
         return{
@@ -102,3 +107,5 @@ export default {
     
 }
 </script>
+```
+
