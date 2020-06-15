@@ -1,2 +1,19 @@
-# vuex-module
-模块化 vuex 状态管理 懒加载 模块化的vuxe的懒加载
+# hello-mkh
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
